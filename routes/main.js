@@ -24,10 +24,10 @@ router.get('/config', (req, res) => {
         status: true,
         result: {
             prefix : '/',
-            namabot: 'ZhirrrBot',
-            namaowner: 'Zhirrr',
-            instagram: 'zhirr_ajalah',
-            youtube : 'Gak Punya'
+            namabot: 'YBot',
+            namaowner: 'Yuda',
+            instagram: 'yuda.dika.12',
+            youtube : 'Yuda Xwer'
         }
     }
     res.json(config)
