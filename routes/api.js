@@ -8,7 +8,7 @@ var zahirr = db.get("zahirr");
 	console.log('')
 }
 
-var creatorList = ['Yuda Xwer'];
+var creatorList = ['@zahirrr','@zhirrrgans','@zhirr_ajalah','@zahiranjay', '@YudaXwersss','@zhirrganteng','@zahirrgantengg'];
 var creator = creatorList[Math.floor(Math.random() * creatorList.length)];
 
 
@@ -40,7 +40,7 @@ loghandler = {
         creator: `${creator}`,
         code: 406,
         message: 'masukan parameter apikey',
-        getApikey: 'gak punya apikey? cek di YT Yuda Xwer'
+        getApikey: 'gak punya apikey? chat gw aja yaaa di wa.me/6283898698875 , key nya gratis kok gan, jadi santuyy ajaa'
     },
     notkey: {
         status: false,
