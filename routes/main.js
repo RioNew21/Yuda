@@ -11,8 +11,12 @@ router.get('/api', (req, res) => {
     res.sendFile(__path + '/views/index.html')
 })
 
-router.get('/api/about', (req, res) => {
-    res.sendFile(__path + '/views/about.html')
+router.get('/api/game', (req, res) => {
+    res.sendFile(__path + '/views/game.html')
+})
+
+router.get('/api/tutorial', (req, res) => {
+    res.sendFile(__path + '/views/tutorial.html')
 })
 
 router.get('/api/news', (req, res) => {
@@ -23,11 +27,11 @@ router.get('/config', (req, res) => {
     config = {
         status: true,
         result: {
-            prefix : '.',
-            namabot: 'FlinSkyBot',
-            namaowner: 'Rey',
-            instagram: '_sekhaa',
-            youtube : 'hmmm'
+            prefix : 'All Prefix',
+            namabot: 'YBOT',
+            namaowner: 'Yuda',
+            instagram: 'yuda.dika.12',
+            youtube : 'Yuda Xwer'
         }
     }
     res.json(config)
