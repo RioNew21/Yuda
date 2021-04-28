@@ -42,14 +42,8 @@ var port = process.env.PORT || 8080 || 5000 || 3000
         time: `${jam} : ${menit} : ${detik}`,
         uptime: muptime(process.uptime()),
         speed: `${neww - old}ms`,
-        info:{
-            prefix : 'All Prefix',
-            nama_bot: 'Kuhong Bot',
-            nama_owner: 'Rendy',
-            deskripsi: 'Hanya sekedar untuk belajar :)',
-            instagram: 'rendycraft047',
-            youtube: 'RC047',
-            donasi: 'https://saweria.co/RC047',
+        info:{       
+            owner: 'Yuda',            
             apikey: 'Chat Owner: https://wa.me/6281370435024'
         }
     }
