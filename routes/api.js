@@ -2823,7 +2823,7 @@ router.get('/yutub/video', async (req, res, next) => {
 	if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
     if (!url) return res.json({ status : false, creator : `${creator}`, message : "Masukan parameter url"})
 
-       fetch(encodeURI(`https://api.zeks.xyz/api/ytmp4?url=${url}&apikey=alpin1234567`))
+       fetch(encodeURI(`https://api.zeks.xyz/api/ytmp4?url=${url}&apikey=apivinz`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -2846,7 +2846,7 @@ router.get('/yutub/audio', async (req, res, next) => {
 	if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
     if (!url) return res.json({ status : false, creator : `${creator}`, message : "Masukan parameter url"})
 
-       fetch(encodeURI(`https://api.zeks.xyz/api/ytmp3?url=${url}&apikey=alpin1234567`))
+       fetch(encodeURI(`https://api.zeks.xyz/api/ytmp3?url=${url}&apikey=apivinz`))
         .then(response => response.json())
         .then(data => {
         var result = data;
