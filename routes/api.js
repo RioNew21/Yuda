@@ -2820,20 +2820,20 @@ router.get('/yutub/video', async (req, res, next) => {
             url = req.query.url
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
-    if (!url) return res.json({ status : false, creator : `${creator}`, message : "Masukan parameter url"})
+	if(apikeyInput != `${key}`) return res.json(loghandler.invalidKey)
+    if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
 
-       fetch(encodeURI(`https://api.zeks.xyz/api/ytmp4?url=${url}&apikey=apivinz`))
+       fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/ytv?url=${url}`))
         .then(response => response.json())
         .then(data => {
         var result = data;
              res.json({
-             	author: 'YudaXwer',
+             	author: 'Yuda',
                  result
              })
          })
          .catch(e => {
-         	res.sendFile(error)
+         	res.json(loghandler.error)
 })
 })
 
@@ -2843,22 +2843,23 @@ router.get('/yutub/audio', async (req, res, next) => {
             url = req.query.url
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
-    if (!url) return res.json({ status : false, creator : `${creator}`, message : "Masukan parameter url"})
+	if(apikeyInput != `${key}`) return res.json(loghandler.invalidKey)
+    if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
 
-       fetch(encodeURI(`https://api.zeks.xyz/api/ytmp3?url=${url}&apikey=apivinz`))
+       fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/yta?url=${url}`))
         .then(response => response.json())
         .then(data => {
         var result = data;
              res.json({
-             	author: 'YudaXwer',
+             	author: 'Yuda',
                  result
              })
          })
          .catch(e => {
-         	res.sendFile(error)
+         	res.json(loghandler.error)
 })
 })
+
 
 
 router.get('/ig/stalk', async (req, res, next) => {
@@ -3697,6 +3698,27 @@ router.get('/triggered', async (req, res, next) => {
     res.sendFile(error)
       }
 })
+router.get('/wasted', async (req, res, next) => {
+       var img = req.query.img,
+	   apikeyInput = req.query.apikey;
+	
+  if(!apikeyInput) return res.json(loghandler.notparam)
+  if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
+  if (!img) return res.json(loghandler.notimg)
+  if (!img.startsWith('http')) return res.json(loghandler.invalidLink)
+
+ try {
+	 var result = await imageToBase64(https://leyscoders-api.herokuapp.com/api/img/wasted?url=${data.display_url}&apikey=OneDayOneCharity`)
+	 var hasil = Buffer.from(result, 'base64')
+            await fs.writeFileSync(__path + '/tmp/wasted.png', hasil)
+
+    res.sendFile(__path + '/tmp/wasted.png')
+  } catch (e) {
+  	console.log(e)
+    res.sendFile(error)
+      }
+})
+
 
 router.get('/emojitopng', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
