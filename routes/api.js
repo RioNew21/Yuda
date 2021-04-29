@@ -3708,7 +3708,7 @@ router.get('/wasted', async (req, res, next) => {
   if (!img.startsWith('http')) return res.json(loghandler.invalidLink)
 
  try {
-	 var result = await imageToBase64(https://leyscoders-api.herokuapp.com/api/img/wasted?url=${data.display_url}&apikey=OneDayOneCharity`)
+	 var result = await imageToBase64(https://leyscoders-api.herokuapp.com/api/img/wasted?url=${data.display_url}&apikey=${leyskey}`)
 	 var hasil = Buffer.from(result, 'base64')
             await fs.writeFileSync(__path + '/tmp/wasted.png', hasil)
 
