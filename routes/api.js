@@ -632,15 +632,14 @@ router.get('/serti', async (req, res, next) => {
             '-font',
             fontPath,
             '-size',
-            '700x960',
+            '800x960',
             '-pointsize',
-            '30',
-            '-interline-spacing',
-            '-7',
+            '35',
             '-annotate',
-            '+180+281',
+            '+460+83',
             text,
             outputPath
+
          ])
          .on('error', () => console.log('Error Nulis'))
          .on('exit', () =>
