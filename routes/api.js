@@ -632,11 +632,11 @@ router.get('/serti', async (req, res, next) => {
             '-font',
             fontPath,
             '-size',
-            '800x960',
+            '800x450',
             '-pointsize',
             '35',
             '-annotate',
-            '+460+83',
+            '+245+145',
             text,
             outputPath
 
