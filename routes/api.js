@@ -638,7 +638,7 @@ router.get('/serti', async (req, res, next) => {
             '-interline-spacing',
             '-7',
             '-annotate',
-            '+230+181',
+            '+180+281',
             text,
             outputPath
          ])
